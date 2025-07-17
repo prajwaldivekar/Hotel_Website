@@ -44,6 +44,13 @@
       transform: scale(1.01);
     }
 
+    /* To making images size same  */
+    .menu-card img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+    }
+
     footer {
       background: linear-gradient(90deg, #0d6efd, #6610f2);
     }
@@ -88,24 +95,28 @@
     <div class="container">
       <h2 class="text-center mb-5 display-6 text-dark">🌶️ Trending Dishes</h2>
       <div class="row g-4">
-        <!-- Food Item -->
+
+        <!-- Pav Bhaji -->
         <div class="col-md-6">
           <div class="d-flex bg-white rounded shadow-sm overflow-hidden h-100 menu-card">
-            <img src="./images/pavbhaji.jpg" alt="Pav Bhaji" class="img-fluid" style="width: 120px; object-fit: cover;">
+            <img src="./images/pavbhaji.jpg" alt="Pav Bhaji" class="img-fluid"
+              style="width: 120px; height: 120px; object-fit: cover;">
             <div class="p-3 flex-grow-1">
               <div class="d-flex justify-content-between">
                 <h5 class="fw-bold">Pav Bhaji</h5>
                 <span class="text-primary fw-semibold">₹80</span>
               </div>
-              <p class="text-muted small mb-0">Spicy mashed vegetables with buttery pav, garnished with coriander & onion.</p>
+              <p class="text-muted small mb-0">Spicy mashed vegetables with buttery pav, garnished with coriander &
+                onion.</p>
             </div>
           </div>
         </div>
 
-        <!-- More Food Items -->
+        <!-- Vada Pav -->
         <div class="col-md-6">
           <div class="d-flex bg-white rounded shadow-sm overflow-hidden h-100 menu-card">
-            <img src="./images/Vada_Pav.webp" alt="Vada Pav" class="img-fluid" style="width: 120px; object-fit: cover;">
+            <img src="./images/Vada_Pav.webp" alt="Vada Pav" class="img-fluid"
+              style="width: 120px; height: 120px; object-fit: cover;">
             <div class="p-3 flex-grow-1">
               <div class="d-flex justify-content-between">
                 <h5 class="fw-bold">Vada Pav</h5>
@@ -116,9 +127,11 @@
           </div>
         </div>
 
+        <!-- Misal Pav -->
         <div class="col-md-6">
           <div class="d-flex bg-white rounded shadow-sm overflow-hidden h-100 menu-card">
-            <img src="./images/misalpav.jpeg" alt="Misal Pav" class="img-fluid" style="width: 120px; object-fit: cover;">
+            <img src="./images/misalpav.jpeg" alt="Misal Pav" class="img-fluid"
+              style="width: 120px; height: 120px; object-fit: cover;">
             <div class="p-3 flex-grow-1">
               <div class="d-flex justify-content-between">
                 <h5 class="fw-bold">Misal Pav</h5>
@@ -129,18 +142,131 @@
           </div>
         </div>
 
+        <!-- Dahi Misal -->
         <div class="col-md-6">
           <div class="d-flex bg-white rounded shadow-sm overflow-hidden h-100 menu-card">
-            <img src="./images/masala_dosa.webp" alt="Masala Dosa" class="img-fluid" style="width: 120px; object-fit: cover;">
+            <img src="./images/dahi_misal.webp" alt="Dahi Misal" class="img-fluid"
+              style="width: 120px; height: 120px; object-fit: cover;">
             <div class="p-3 flex-grow-1">
               <div class="d-flex justify-content-between">
-                <h5 class="fw-bold">Masala Dosa</h5>
+                <h5 class="fw-bold">Dahi Misal</h5>
                 <span class="text-primary fw-semibold">₹70</span>
               </div>
-              <p class="text-muted small mb-0">Crispy dosa stuffed with flavorful potato masala, served with chutney & sambar.</p>
+              <p class="text-muted small mb-0">A slightly milder version with curd to balance the spice.</p>
             </div>
           </div>
         </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- More Items Section -->
+  <section class="py-5 bg-light mt-5 pt-5">
+    <div class="container">
+      <h2 class="text-center mb-5 display-6 text-dark">More Items</h2>
+      <div class="row g-4">
+
+        <!-- Extra Pav -->
+        <div class="col-md-6">
+          <div class="d-flex bg-white rounded shadow-sm overflow-hidden h-100 menu-card">
+            <img src="./images/extra_pav.webp" alt="Extra Pav" class="img-fluid"
+              style="width: 120px; height: 120px; object-fit: cover;">
+            <div class="p-3 flex-grow-1">
+              <div class="d-flex justify-content-between">
+                <h5 class="fw-bold">Extra Pav</h5>
+                <span class="text-primary fw-semibold">₹10</span>
+              </div>
+              <p class="text-muted small mb-0">Additional pav (bread) if needed.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Butter Pav -->
+        <div class="col-md-6">
+          <div class="d-flex bg-white rounded shadow-sm overflow-hidden h-100 menu-card">
+            <img src="./images/buttur_pav.webp" alt="Butter Pav" class="img-fluid"
+              style="width: 120px; height: 120px; object-fit: cover;">
+            <div class="p-3 flex-grow-1">
+              <div class="d-flex justify-content-between">
+                <h5 class="fw-bold">Butter Pav</h5>
+                <span class="text-primary fw-semibold">₹15</span>
+              </div>
+              <p class="text-muted small mb-0">Pav roasted with butter.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Beverages Section -->
+  <section class="py-5 bg-light mt-5 pt-5">
+    <div class="container">
+      <h2 class="text-center mb-5 display-6 text-dark">Beverages</h2>
+      <div class="row g-4">
+
+        <!-- Cold Coffee -->
+        <div class="col-md-6">
+          <div class="d-flex bg-white rounded shadow-sm overflow-hidden h-100 menu-card">
+            <img src="./images/Cold_Coffee.webp" alt="Cold Coffee" class="img-fluid"
+              style="width: 120px; height: 120px; object-fit: cover;">
+            <div class="p-3 flex-grow-1">
+              <div class="d-flex justify-content-between">
+                <h5 class="fw-bold">Cold Coffee</h5>
+                <span class="text-primary fw-semibold">₹30</span>
+              </div>
+              <p class="text-muted small mb-0">Refreshing coffee over ice.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tea -->
+        <div class="col-md-6">
+          <div class="d-flex bg-white rounded shadow-sm overflow-hidden h-100 menu-card">
+            <img src="./images/tea.webp" alt="Tea" class="img-fluid"
+              style="width: 120px; height: 120px; object-fit: cover;">
+            <div class="p-3 flex-grow-1">
+              <div class="d-flex justify-content-between">
+                <h5 class="fw-bold">Tea (Chai)</h5>
+                <span class="text-primary fw-semibold">₹10</span>
+              </div>
+              <p class="text-muted small mb-0">Regular or cutting chai.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lassi -->
+        <div class="col-md-6">
+          <div class="d-flex bg-white rounded shadow-sm overflow-hidden h-100 menu-card">
+            <img src="./images/lassi.jpg" alt="Lassi" class="img-fluid"
+              style="width: 120px; height: 120px; object-fit: cover;">
+            <div class="p-3 flex-grow-1">
+              <div class="d-flex justify-content-between">
+                <h5 class="fw-bold">Lassi</h5>
+                <span class="text-primary fw-semibold">₹30</span>
+              </div>
+              <p class="text-muted small mb-0">Curd-based, filling drink.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hot Coffee -->
+        <div class="col-md-6">
+          <div class="d-flex bg-white rounded shadow-sm overflow-hidden h-100 menu-card">
+            <img src="./images/coffie.webp" alt="Hot Coffee" class="img-fluid"
+              style="width: 120px; height: 120px; object-fit: cover;">
+            <div class="p-3 flex-grow-1">
+              <div class="d-flex justify-content-between">
+                <h5 class="fw-bold">Coffee (Hot)</h5>
+                <span class="text-primary fw-semibold">₹20</span>
+              </div>
+              <p class="text-muted small mb-0">Light filter coffee.</p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
