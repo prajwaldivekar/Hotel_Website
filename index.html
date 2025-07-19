@@ -131,7 +131,61 @@
         transform: translateY(0);
       }
     }
+    footer {
+        background: linear-gradient(90deg, #d1d1d1, #0b29e2);
+
+      }
   </style>
+
+  <!-- About Page Image Scetion -->
+  <!-- Images section CSS -->
+  <style>
+    .photo-strip {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      gap: 15px;
+      padding: 10px 0;
+    }
+
+    .photo-strip img {
+      height: 220px;
+      width: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+
+    .scroll-btn {
+      position: absolute;
+      top: 40%;
+      transform: translateY(-50%);
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .scroll-btn.left {
+      left: -20px;
+    }
+
+    .scroll-btn.right {
+      right: -20px;
+    }
+
+    @media (max-width: 768px) {
+      .photo-strip img {
+        width: 200px;
+        height: 150px;
+      }
+    }
+  </style>
+
 </head>
 
 <body>
@@ -263,39 +317,247 @@
   <!-- <div class="text-center mt-4">
   <iframe src="https://www.google.com/maps?q=Varvand,+Maharashtra&output=embed" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 </div> -->
-<section class="bg-light py-5">
-  <div class="container">
-    <h3 class="mb-4">📍 Location</h3>
-    <div class="row align-items-center">
-      <!-- Embedded Google Map -->
-      <div class="col-md-6 mb-3">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.830651398621!2d74.41555827465045!3d18.445996671449027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc317f1d1e8e85b%3A0x470898974d82fac3!2sSai%20datta%20washing%20centre!5e0!3m2!1sen!2sin!4v1752813679030!5m2!1sen!2sin"
-          width="100%"
-          height="300"
-          style="border:0; border-radius: 12px;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
+  <section class="bg-light py-5">
+    <div class="container">
+      <h3 class="mb-4">📍 Location</h3>
+      <div class="row align-items-center">
+        <!-- Embedded Google Map -->
+        <div class="col-md-6 mb-3">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.830651398621!2d74.41555827465045!3d18.445996671449027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc317f1d1e8e85b%3A0x470898974d82fac3!2sSai%20datta%20washing%20centre!5e0!3m2!1sen!2sin!4v1752813679030!5m2!1sen!2sin"
+            width="100%" height="300" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
 
-      <!-- Address and details -->
-      <div class="col-md-6">
-        <p><i class="bi bi-geo-alt-fill me-2"></i>
-          <strong>A/P Varvand, Pune-Solapur Highway, Maharashtra 412215</strong>
-        </p>
-        <p><i class="bi bi-link-45deg me-2"></i>
-          <a href="https://maps.app.goo.gl/ZGV2LCxsrkCDvfqQ6" target="_blank">Open in Google Maps</a>
-        </p>
-        <p><i class="bi bi-p-square-fill me-2"></i> Parking Available, Valet Parking</p>
-        <p><i class="bi bi-clock-fill me-2"></i> Open Hours: 9:00 AM – 10:00 PM</p>
-        <p><i class="bi bi-telephone-fill me-2"></i> <a href="tel:+919876543210">+91 98765 43210</a></p>
-        <p><i class="bi bi-envelope-fill me-2"></i> <a href="mailto:saidattarestaurant@gmail.com">saidattarestaurant@gmail.com</a></p>
+        <!-- Address and details -->
+        <div class="col-md-6">
+          <p><i class="bi bi-geo-alt-fill me-2"></i>
+            <strong>A/P Varvand, Pune-Solapur Highway, Maharashtra 412215</strong>
+          </p>
+          <p><i class="bi bi-link-45deg me-2"></i>
+            <a href="https://maps.app.goo.gl/ZGV2LCxsrkCDvfqQ6" target="_blank">Open in Google Maps</a>
+          </p>
+          <p><i class="bi bi-p-square-fill me-2"></i> Parking Available, Valet Parking</p>
+          <p><i class="bi bi-clock-fill me-2"></i> Open Hours: 9:00 AM – 10:00 PM</p>
+          <p><i class="bi bi-telephone-fill me-2"></i> <a href="tel:+919876543210">+91 98765 43210</a></p>
+          <p><i class="bi bi-envelope-fill me-2"></i> <a
+              href="mailto:saidattarestaurant@gmail.com">saidattarestaurant@gmail.com</a></p>
+        </div>
       </div>
     </div>
+  </section>
+
+  <!-- Contact Section -->
+  <!-- Contact Section -->
+  <section class="contact-section bg-light py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">📞 Contact Us</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="contact-card p-4 bg-white shadow rounded">
+            <form onsubmit="return sendToWhatsApp();">
+
+              <!-- Name -->
+              <div class="mb-3 input-group">
+                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name" required />
+              </div>
+
+              <!-- Email -->
+              <div class="mb-3 input-group">
+                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                <input type="email" class="form-control" id="email" placeholder="name@example.com" required />
+              </div>
+
+              <!-- Phone -->
+              <div class="mb-3 input-group">
+                <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required />
+              </div>
+
+              <!-- Subject Dropdown -->
+              <div class="mb-3 input-group">
+                <span class="input-group-text"><i class="fas fa-list"></i></span>
+                <select class="form-select" id="subject" required>
+                  <option value="" disabled selected>Select a subject</option>
+                  <option value="General Inquiry">General Inquiry</option>
+                  <option value="Table Booking">Table Booking</option>
+                  <option value="Feedback">Feedback</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <!-- Message -->
+              <div class="mb-3">
+                <label for="message" class="form-label">Your Message</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="Write your message here..."
+                  required></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-success w-100">
+                <i class="fab fa-whatsapp me-2"></i>Send Message on WhatsApp
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- About Section -->
+  <section class="about-section bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5">👨‍🍳 About Us</h2>
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="./images/bg.jpg" alt="Sai Datta Restaurant" class="img-fluid about-img w-100" />
+        </div>
+        <div class="col-md-6">
+          <div class="about-text">
+            <h4 class="mb-3">Welcome to Sai Datta Restaurant</h4>
+            <p>
+              Established in Varvand, Pune, <strong>Sai Datta Restaurant</strong> is known for serving
+              delicious,
+              affordable, and hygienic Indian dishes.
+              We focus on local flavors like <strong>Pav Bhaji, Misal Pav, Lassi</strong> and many more.
+            </p>
+            <p>
+              Our goal is to provide a family-friendly dining experience with consistent quality and service. We
+              take
+              pride in using fresh ingredients and traditional recipes that keep our customers coming back!
+            </p>
+            <p>
+              Visit us on Pune–Solapur Highway, near Indian Oil Petrol Pump, Tal–Daund.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="bg-light py-5">
+    <div class="container">
+      <div class="row justify-content-between align-items-start">
+        <!-- Left: Overall Rating -->
+        <div class="col-md-6 mb-4">
+          <h3 class="mb-4">
+            <span style="font-size: 1.5rem;">⭐</span> Reviews
+          </h3>
+          <h1 class="fw-bold display-4 mb-1">5.0</h1>
+          <p class="text-success fw-semibold">Excellent</p>
+          <div class="d-flex align-items-center text-success mb-4" style="font-size: 1.5rem;">
+            ★★★★★ <span class="ms-2 text-dark" style="font-size: 1rem;">(1,072)</span>
+          </div>
+
+          <!-- Rating Breakdown -->
+          <div class="mb-2 d-flex align-items-center">
+            <span class="me-2" style="width: 70px;">Excellent</span>
+            <div class="progress flex-grow-1 me-2" style="height: 8px;">
+              <div class="progress-bar bg-success" style="width: 96%;"></div>
+            </div>
+            <span>1,036</span>
+          </div>
+          <div class="mb-2 d-flex align-items-center">
+            <span class="me-2" style="width: 70px;">Good</span>
+            <div class="progress flex-grow-1 me-2" style="height: 8px;">
+              <div class="progress-bar bg-success" style="width: 30%;"></div>
+            </div>
+            <span>32</span>
+          </div>
+          <div class="mb-2 d-flex align-items-center">
+            <span class="me-2" style="width: 70px;">Average</span>
+            <div class="progress flex-grow-1 me-2" style="height: 8px;">
+              <div class="progress-bar bg-success" style="width: 8%;"></div>
+            </div>
+            <span>2</span>
+          </div>
+          <div class="mb-2 d-flex align-items-center">
+            <span class="me-2" style="width: 70px;">Poor</span>
+            <div class="progress flex-grow-1 me-2" style="height: 8px;">
+              <div class="progress-bar bg-success" style="width: 2%;"></div>
+            </div>
+            <span>1</span>
+          </div>
+          <div class="mb-2 d-flex align-items-center">
+            <span class="me-2" style="width: 70px;">Terrible</span>
+            <div class="progress flex-grow-1 me-2" style="height: 8px;">
+              <div class="progress-bar bg-success" style="width: 2%;"></div>
+            </div>
+            <span>1</span>
+          </div>
+        </div>
+
+        <!-- Right: Category Ratings + Button -->
+        <div class="col-md-6 mb-4">
+          <div class="mb-3 d-flex align-items-center">
+            <span class="me-2" style="width: 100px;">Service</span>
+            <div class="progress flex-grow-1 me-2" style="height: 8px;">
+              <div class="progress-bar bg-success" style="width: 100%;"></div>
+            </div>
+            <span>5.0</span>
+          </div>
+          <div class="mb-3 d-flex align-items-center">
+            <span class="me-2" style="width: 100px;">Food</span>
+            <div class="progress flex-grow-1 me-2" style="height: 8px;">
+              <div class="progress-bar bg-success" style="width: 98%;"></div>
+            </div>
+            <span>4.9</span>
+          </div>
+          <div class="mb-3 d-flex align-items-center">
+            <span class="me-2" style="width: 100px;">Value</span>
+            <div class="progress flex-grow-1 me-2" style="height: 8px;">
+              <div class="progress-bar bg-success" style="width: 94%;"></div>
+            </div>
+            <span>4.7</span>
+          </div>
+          <div class="mb-3 d-flex align-items-center">
+            <span class="me-2" style="width: 100px;">Atmosphere</span>
+            <div class="progress flex-grow-1 me-2" style="height: 8px;">
+              <div class="progress-bar bg-success" style="width: 98%;"></div>
+            </div>
+            <span>4.9</span>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- images Section  -->
+  <!-- Photo Section -->
+  <div class="container my-5">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h2>📸 Our Gallery</h2>
+
+    </div>
+
+    <div class="position-relative">
+      <!-- Left Scroll Button -->
+      <button onclick="scrollGallery('left')" class="scroll-btn left">
+        &#8592;
+      </button>
+
+      <!-- Image Scroll Container -->
+      <div class="photo-strip" id="photoStrip">
+        <img src="./images/Cold_Coffee.webp" alt="Cold Coffee">
+        <img src="./images/dahi_misal.webp" alt="Dahi Misal">
+        <img src="./images/buttur_pav.webp" alt="Butter Pav">
+        <img src="./images/extra_pav.webp" alt="Paneer Tikka">
+        <img src="./images/tea.webp" alt="Misal Pav">
+        <!-- Add more images here -->
+      </div>
+
+      <!-- Right Scroll Button -->
+      <button onclick="scrollGallery('right')" class="scroll-btn right">
+        &#8594;
+      </button>
+    </div>
   </div>
-</section>
+
 
 
 
@@ -330,6 +592,43 @@
       event.preventDefault();
       const input = document.getElementById("searchInput").value.trim();
       if (input) alert("You searched for: " + input);
+    }
+  </script>
+
+  <!-- contact page script -->
+  <script>
+    function sendToWhatsApp() {
+      let name = document.getElementById("name").value;
+      let email = document.getElementById("email").value;
+      let phone = document.getElementById("phone").value;
+      let subject = document.getElementById("subject").value;
+      let message = document.getElementById("message").value;
+
+      let text = `New Restaurant Inquiry 📝%0A
+Name: ${name}%0A
+Email: ${email}%0A
+Phone: ${phone}%0A
+Subject: ${subject}%0A
+Message: ${message}`;
+
+      let whatsappNumber = "7499757100"; // Replace with your WhatsApp number with country code
+      let url = `https://wa.me/${whatsappNumber}?text=${text}`;
+
+      window.open(url, '_blank');
+      return false; // Prevent default form submission
+    }
+  </script>
+
+  <!-- About Section Image Page Script -->
+  <!-- Image Section Script -->
+  <script>
+    function scrollGallery(direction) {
+      const strip = document.getElementById('photoStrip');
+      const scrollAmount = 320; // adjust if image width changes
+      strip.scrollBy({
+        left: direction === 'right' ? scrollAmount : -scrollAmount,
+        behavior: 'smooth'
+      });
     }
   </script>
 </body>
